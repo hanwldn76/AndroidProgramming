@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">BaseApp</string>
-    <string name="strBtn1">버튼입니다.</string>
-    <string name="strNate">네이트 홈페이지 열기</string>
-    <string name="strCall">911 전화하기</string>
-    <string name="strGallery">갤러리 열기</string>
-    <string name="strFinish">끝내기</string>
-</resources>
