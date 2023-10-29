@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.item1) {
             imgV1.setImageResource(R.drawable.jeju1);
         } else if (itemId == R.id.item2) {
-            imgV1.setImageResource(R.drawable.jeju2);
+            imgV1.setImageResource(R.drawable.jeju14);
         } else if (itemId == R.id.item3) {
-            imgV1.setImageResource(R.drawable.jeju3);
+            imgV1.setImageResource(R.drawable.jeju6);
         }
         return true;
     }
