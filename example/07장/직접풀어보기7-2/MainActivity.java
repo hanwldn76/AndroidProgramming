@@ -36,35 +36,35 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater menuInflater = getMenuInflater();
 
         if(v==btn1){
-            menu.setHeaderTitle("배경색 변경");
-            menuInflater.inflate(R.menu.menu1, menu);
+            menu.add(0, 1, 0, "배경색(빨강)");
+            menu.add(0, 2, 0, "배경색(초록)");
+            menu.add(0, 3, 0, "배경색(파랑)");
         }
         if(v==btn2){
-            menu.setHeaderTitle("각도 및 크기 변경");
-            menuInflater.inflate(R.menu.menu2, menu);
+            menu.add(0, 4, 0, "버튼 45도 회전");
+            menu.add(0, 5, 0, "버튼 2배 확대");
         }
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.itemRed:
+            case 1:
                 baseLayout.setBackgroundColor(Color.RED);
                 break;
-            case R.id.itemGreen:
+            case 2:
                 baseLayout.setBackgroundColor(Color.GREEN);
                 break;
-            case R.id.itemBlue:
+            case 3:
                 baseLayout.setBackgroundColor(Color.BLUE);
                 break;
-            case R.id.subRotate:
+            case 4:
                 dgree = dgree + 45;
                 btn1.setRotation(dgree);
                 break;
-            case R.id.subSize:
+            case 5:
                 scaletwice = scaletwice * 2;
                 btn2.setScaleX(scaletwice);
                 break;
