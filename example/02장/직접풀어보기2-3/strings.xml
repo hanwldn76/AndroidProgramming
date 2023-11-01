@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">project</string>
+    <string name="app_name">FourButton</string>
+    <string name="strNate">네이트 홈페이지 열기</string>
+    <string name="strCall">911전화걸기</string>
+    <string name="strGallery">갤러리열기</string>
+    <string name="strFinish">끝내기</string>
 </resources>
