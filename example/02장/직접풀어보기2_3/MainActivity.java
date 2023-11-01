@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.fourbutton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
