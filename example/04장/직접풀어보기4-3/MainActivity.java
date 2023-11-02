@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "0으로 나누면 안됩니다!.", Toast.LENGTH_SHORT).show();
                 } else{
                     result = Double.parseDouble(num1) / Double.parseDouble(num2);
-                    result = (int) (result / 10) * 10.0;
+                    result = (int) (result * 10) / 10.0;
                     text1.setText("계산 결과 : "+result.toString());
                 }
             }

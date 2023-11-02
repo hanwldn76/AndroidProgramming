@@ -20,7 +20,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText editText;
+    Button btn;
+    TextView textView;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,26 +39,27 @@ public class MainActivity extends AppCompatActivity {
         baseLayout.setBackgroundColor(Color.rgb(255, 255, 255));
         setContentView(baseLayout, params);
 
-        EditText editText = new EditText(this);
-        editText.setText("IT Cookbook. Android");
+        editText = new EditText(this);
+        editText.setHint("여기에 입력하세요");
         editText.setTextColor(Color.BLACK);
         baseLayout.addView(editText);
 
-        Button btn = new Button(this);
+        btn = new Button(this);
         btn.setText("버튼입니다.");
         btn.setBackgroundColor(Color.YELLOW);
         btn.setTextColor(Color.BLACK);
         baseLayout.addView(btn);
 
-        TextView textView = new TextView(this);
-        textView.setText("IT Cookbook. Android");
+        textView = new TextView(this);
+        textView.setText("텍스트뷰입니다.");
+        textView.setTextSize(20);
         textView.setTextColor(Color.MAGENTA);
         baseLayout.addView(textView);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "코드로 생성한 버튼입니다.", Toast.LENGTH_SHORT).show();
+                textView.setText(editText.getText().toString());
             }
         });
     }
