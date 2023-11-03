@@ -1,4 +1,4 @@
-package com.cookandroid.project8_2;
+package com.cookandroid.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
