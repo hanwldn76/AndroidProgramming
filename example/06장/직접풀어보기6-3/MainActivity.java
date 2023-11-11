@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
+import com.example.project.R;
 
 public class MainActivity extends AppCompatActivity {
     @Override
