@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.example.project;
+=======
+package com.cookandroid.project;
+>>>>>>> 3f5376d34efd5809e72afdce7076021ac70355c7
 
 import androidx.appcompat.app.AppCompatActivity;
 
