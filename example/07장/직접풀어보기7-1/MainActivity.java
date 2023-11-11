@@ -1,4 +1,4 @@
-package com.cookandroid.project7_1;
+package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +15,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.project.R;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText edtAngle;
-    ImageView imgV1;
+    ImageView imgV1, imgV2, imgV3;
     float degree = 0;
     float scale = 1;
 
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setTitle("제주도 풍경");
 
         edtAngle = (EditText) findViewById(R.id.edtAngle);
-        imgV1 = (ImageView) findViewById(R.id.img);
+        imgV1 = (ImageView) findViewById(R.id.img1);
+        imgV2 = (ImageView) findViewById(R.id.img2);
+        imgV3 = (ImageView) findViewById(R.id.img3);
     }
 
     @Override
@@ -43,15 +47,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.item0) {
-            imgV1.setRotation(Float.parseFloat((edtAngle.getText().toString())));
-        } else if (itemId == R.id.item1) {
-            imgV1.setImageResource(R.drawable.jeju1);
-        } else if (itemId == R.id.item2) {
-            imgV1.setImageResource(R.drawable.jeju14);
-        } else if (itemId == R.id.item3) {
-            imgV1.setImageResource(R.drawable.jeju6);
+        switch (item.getItemId()){
+            case R.id.itemRotate:
+                imgV1.setRotation(Float.parseFloat((edtAngle.getText().toString())));
+                return true;
+            case R.id.item1:
+                imgV1.setImageResource(R.drawable.jeju14);
+                return true;
+            case R.id.item2:
+                imgV1.setImageResource(R.drawable.jeju1);
+                return true;
+            case R.id.item3:
+                imgV1.setImageResource(R.drawable.jeju6);
+                return true;
         }
         return true;
     }
