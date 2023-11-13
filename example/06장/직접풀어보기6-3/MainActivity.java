@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+	setTitle("직접풀어보기 6-3");
+
         TabHost tabHost = findViewById(R.id.TabHost);
         tabHost.setup();
 
