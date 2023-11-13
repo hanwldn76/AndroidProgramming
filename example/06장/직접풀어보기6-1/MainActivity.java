@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_main);
-        setTitle("사용자 정보 입력");
+        setTitle("시간 예약");
 
         chrono = (Chronometer) findViewById(R.id.chronometer1);
         rdoBtn1 = (RadioButton) findViewById(R.id.rdoBtn1);
