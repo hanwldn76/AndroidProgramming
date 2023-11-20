@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rdoGroop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:id="@+id/rdoSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second 액티비티"
+            app:layout_constraintTop_toBottomOf="@+id/rdoGroop"></RadioButton>
+        <RadioButton
+            android:id="@+id/rdoThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Third 액티비티"
+            app:layout_constraintTop_toBottomOf="@+id/rdoSecond"></RadioButton>
+    </RadioGroup>
+
+    <android.widget.Button
+        android:id="@+id/btnNewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새 화면 열기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdoGroop"></android.widget.Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
