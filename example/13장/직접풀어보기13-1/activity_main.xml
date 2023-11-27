@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_weight="6"
+        tools:ignore="MissingConstraints">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewMP3"></ListView>
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnPlay"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="424dp"
+        android:text="듣기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></android.widget.Button>
+
+    <android.widget.Button
+        android:id="@+id/btnPause"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="424dp"
+        android:text="일시정지"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="parent"></android.widget.Button>
+    <android.widget.Button
+        android:id="@+id/btnStop"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="424dp"
+        android:text="중지"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toTopOf="parent"></android.widget.Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop">
+        <TextView
+            android:id="@+id/tvMP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="실행중인 음악: "></TextView>
+        <ProgressBar
+            android:id="@+id/pbMP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"></ProgressBar>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
