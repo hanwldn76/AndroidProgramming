@@ -1,4 +1,4 @@
-package com.cookandroid.project10_2;
+package com.example.p;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         Integer imageId[] = {
                 R.id.iv1, R.id.iv2, R.id.iv3, R.id.iv4, R.id.iv5,
-                R.id.iv6, R.id.iv7, R.id.iv8, R.id.iv8
+                R.id.iv6, R.id.iv7, R.id.iv8, R.id.iv9  
         };
 
         final String imgName[] = {
-                "a", "b", "c", "d", "e",
-                "f", "g", "h", "i"
+                "독서하는 소녀", "꽃장식 모자 소녀", "부채를 든 소녀", "이레느깡 단 베르양", "잠자는 소녀",
+                "테라스의 두 자매", "피아노 레슨", "피아노 앞의 소녀들", "해변에서"
         };
 
         for(int i = 0; i<imageId.length; i++){
@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-        btnFinish = (Button) findViewById(R.id.btnFinish);
+        btnFinish = (Button) findViewById(R.id.btnResult);
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SecondAcitivity.class);
+                Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                 intent.putExtra("VoteCount", voteCount);
                 intent.putExtra("ImageName", imgName);
                 startActivity(intent);
