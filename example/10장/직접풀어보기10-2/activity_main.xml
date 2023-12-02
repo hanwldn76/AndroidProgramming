@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/iv5"></ImageView>
 
     <android.widget.Button
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="투표종료"
